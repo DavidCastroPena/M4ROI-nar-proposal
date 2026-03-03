@@ -1,34 +1,33 @@
-M4ROI NAR Proposal
+ M4ROI — AI Marketing Agents for Local Business Growth
 
-This lightweight repo is a minimal wrapper for the NAR ad proposal HTML. The canonical source with full styling and brief lives in the main project at `exploratory/NAR/nar_ad_proposal.html`.
+**[m4roi.com](https://www.m4roi.com) · david@m4roi.com**
 
-Files:
-- `nar_ad_proposal.html` — an embed/preview that references the source in the main project.
+---
 
-Push to GitHub (recommended):
+## What We Do
 
-1. Create a new empty repository on your GitHub account named `M4ROI-nar-proposal`.
+M4ROI deploys AI marketing agents that help small businesses run smarter, faster advertising campaigns — without an agency, without the guesswork, and at a fraction of the cost.
 
-2. From this folder run (HTTPS):
+Our agents combine market data, competitive intelligence, and the business owner's own knowledge to produce campaigns that are specific, evidence-based, and ready to execute. The output is not a report or a recommendation. It is a production-ready ad campaign grounded in real signals from real customers.
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: add NAR proposal embed"
-git remote add origin https://github.com/DavidCastroPena/M4ROI-nar-proposal.git
-git branch -M main
-git push -u origin main
-```
+---
 
-Or use SSH (if you have keys configured):
+## Case Study — NAR Restaurant, Mountain View CA
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: add NAR proposal embed"
-git remote add origin git@github.com:DavidCastroPena/M4ROI-nar-proposal.git
-git branch -M main
-git push -u origin main
-```
+NAR is an Azerbaijani restaurant competing in a market with established Georgian and Mediterranean competitors. The owner had no paid advertising and a clear goal: get first-time visitors through the door.
 
-If you want, I can run these local git commands and push for you (you'll need to provide an upstream remote or grant access). Otherwise run the HTTPS flow above on your machine.
+M4ROI's agent analyzed the competitive landscape, identified what was working in the market and where the gaps were, and produced a complete Instagram and TikTok campaign brief — specifying the creative direction, the ad format, the offer structure, and the messaging — all derived from data, not intuition.
+
+The owner received a campaign brief that was immediately recognizable as true to their business. Assets are in production.
+
+---
+
+## The Opportunity
+
+Millions of small businesses are surrounded by customer intelligence they cannot access and competitors whose moves they cannot track. National brands have entire teams for this. Local businesses have none of it.
+
+M4ROI closes that gap with AI agents built specifically for the local business market.
+
+---
+
+**[m4roi.com](https://www.m4roi.com) · david@m4roi.com**
