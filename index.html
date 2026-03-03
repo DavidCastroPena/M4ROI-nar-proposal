@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAR Restaurant — Ad Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:    #8B1A13;
+  --deep:   #5C0D09;
+  --cream:  #F5EDE0;
+  --parch:  #EAE0CE;
+  --coal:   #1C1108;
+  --amber:  #C9921A;
+  --muted:  #7A6A59;
+  --border: #D5C9B8;
+  --white:  #FDFAF5;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--coal);
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* COVER */
+.cover {
+  background: var(--deep);
+  padding: 64px 56px 52px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::after {
+  content: '🍎';
+  position: absolute;
+  right: 40px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 220px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--amber);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--amber); }
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.6rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+h1 em { font-style: italic; color: var(--amber); }
+.cover-sub {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.82rem;
+  margin-top: 14px;
+}
+.cover-stats {
+  display: flex;
+  gap: 36px;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--amber);
+  line-height: 1;
+}
+.stat-lbl {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 3px;
+}
+
+/* PAGE */
+.page { padding: 0 56px 72px; }
+
+/* SECTION */
+.sec {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 52px 0 20px;
+}
+.sec-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--amber);
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--coal);
+}
+.sec-rule { flex: 1; height: 1px; background: var(--border); margin-bottom: 3px; }
+
+/* BODY */
+.p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 10px; }
+
+/* HOOK */
+.hook {
+  background: var(--white);
+  border-left: 4px solid var(--amber);
+  padding: 22px 26px;
+  border-radius: 3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--coal);
+  line-height: 1.5;
+}
+
+/* INSIGHT BLOCKS */
+.insights { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.insight-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 18px 20px;
+}
+.insight-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+.insight-body { font-size: 0.84rem; color: var(--coal); line-height: 1.6; }
+
+/* COMPETITOR BOX */
+.competitor-box {
+  background: var(--coal);
+  border-radius: 6px;
+  padding: 28px 32px;
+}
+.competitor-label {
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.competitor-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.competitor-body { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+.competitor-body strong { color: var(--amber); }
+
+/* GAP COLUMNS */
+.gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.gap-col {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.gap-header {
+  background: var(--parch);
+  padding: 9px 14px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+.gap-col ul { padding: 12px 14px 12px 28px; list-style: disc; }
+.gap-col li { font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; line-height: 1.45; }
+
+/* POSITIONING */
+.positioning {
+  background: var(--red);
+  border-radius: 5px;
+  padding: 28px 32px;
+}
+.pos-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 10px;
+}
+.pos-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* AD DIRECTION */
+.ad-direction {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.ad-direction-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.ad-direction-row:last-child { border-bottom: none; }
+.ad-direction-key {
+  background: var(--parch);
+  padding: 12px 16px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 14px;
+}
+.ad-direction-val {
+  padding: 12px 18px;
+  font-size: 0.84rem;
+  color: var(--coal);
+  line-height: 1.6;
+}
+
+/* QUOTES */
+.quotes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.quote-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 16px 18px;
+  position: relative;
+}
+.quote-card::before {
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: var(--red);
+  opacity: 0.12;
+  position: absolute;
+  top: 4px; left: 12px;
+  line-height: 1;
+}
+.quote-text {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--coal);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* FOOTER */
+.footer {
+  padding: 18px 56px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-l { font-size: 0.72rem; color: var(--muted); }
+.footer-r { font-size: 0.68rem; color: var(--border); font-style: italic; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="eyebrow">Ad Campaign Proposal · March 2026</div>
+  <h1>NAR <em>Restaurant</em></h1>
+  <p class="cover-sub">Instagram & TikTok Video Campaign · Mountain View, CA</p>
+  <div class="cover-stats">
+    <div><div class="stat-num">200</div><div class="stat-lbl">Reviews Analyzed</div></div>
+    <div><div class="stat-num">3</div><div class="stat-lbl">Competitors Studied</div></div>
+    <div><div class="stat-num">35s</div><div class="stat-lbl">Video Format</div></div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- 01 WHAT THE DATA SAYS ABOUT NAR -->
+<div class="sec">
+  <span class="sec-num">01 ——</span>
+  <span class="sec-title">What 200 Reviews Tell Us About NAR</span>
+  <span class="sec-rule"></span>
+</div>
+<p class="p">We analyzed 200 customer reviews across NAR and its main Georgian and Mediterranean competitors. Three themes emerge consistently from NAR's own reviews — all three translate directly into ad content.</p>
+<div class="insights">
+  <div class="insight-card">
+    <div class="insight-label">Differentiator #1</div>
+    <div class="insight-body">The food is the experience. Reviewers use words like "phenomenal," "WOW," and "stunning" unprompted — especially about Shah Plov and Gurza. The dishes generate genuine emotional reactions, which is exactly what a video ad needs.</div>
+  </div>
+  <div class="insight-card">
+    <div class="insight-label">Differentiator #2</div>
+    <div class="insight-body">Authentic hospitality. Multiple reviewers specifically mention the owner and staff. The warmth of the service is as memorable as the food — and it shows on camera better than a menu or a logo ever could.</div>
+  </div>
+  <div class="insight-card">
+    <div class="insight-label">Differentiator #3</div>
+    <div class="insight-body">Loyalty after one visit. Reviewers repeatedly say they came once and "told everyone they know." The conversion challenge is the first visit — which is exactly what a Happy Hour offer solves.</div>
+  </div>
+  <div class="insight-card">
+    <div class="insight-label">Opportunity</div>
+    <div class="insight-body">Most Bay Area diners have never tried Azerbaijani cuisine. That unfamiliarity is the ad's hook — "you've never had this before" is more compelling than any discount, and NAR owns it uniquely in Mountain View.</div>
+  </div>
+</div>
+
+<!-- 02 WHAT THE COMPETITION IS DOING -->
+<div class="sec">
+  <span class="sec-num">02 ——</span>
+  <span class="sec-title">What the Competition is Doing — and Where They Fall Short</span>
+  <span class="sec-rule"></span>
+</div>
+
+<div class="competitor-box">
+  <div class="competitor-label">Most Successful Competitor · @bevrifood on Instagram</div>
+  <div class="competitor-title">Bevri's winning format: one person, one table, one meal filmed in real time</div>
+  <div class="competitor-body">
+    Bevri's top-performing Instagram post earned <strong>110 likes, 20 comments, and 9 sends</strong> — strong engagement for a local restaurant. The format is pure UGC: a creator arrives at an empty table, reacts to the menu, films the food arriving, captures the cheese pull from their Adjaruli Khachapuri, and closes warm. No voiceover. No script. No discount mentioned. Just authentic reaction from arrival to final bite.<br><br>
+    This format works because it mirrors exactly how a real first-time visitor experiences the restaurant. The algorithm treats it as organic content, not an ad — which dramatically increases reach and lowers cost per click.
+  </div>
+</div>
+
+<div class="gap-grid">
+  <div class="gap-col">
+    <div class="gap-header">Georgian Competitors — Their Gaps</div>
+    <ul>
+      <li>Service inconsistency and rushed interactions surface repeatedly in reviews</li>
+      <li>Food authenticity questioned — "not real Georgian flavors" cited multiple times</li>
+      <li>Portions perceived as small relative to price</li>
+    </ul>
+  </div>
+  <div class="gap-col">
+    <div class="gap-header">Mediterranean Competitors — Their Gaps</div>
+    <ul>
+      <li>Persistent complaints about food odor inside the restaurant</li>
+      <li>Inconsistent meat quality — dried out, pre-cooked, bland</li>
+      <li>Non-traditional ingredients undermine authenticity claims</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 03 NAR'S POSITION -->
+<div class="sec">
+  <span class="sec-num">03 ——</span>
+  <span class="sec-title">NAR's Positioning</span>
+  <span class="sec-rule"></span>
+</div>
+<div class="positioning">
+  <div class="pos-label">What the data says NAR owns</div>
+  <div class="pos-text">"The only restaurant in the South Bay where the food ritual is the entertainment — Azerbaijani cuisine with the theatrical drama of a Caucasian feast and the warmth of someone's home."</div>
+</div>
+<p class="p" style="margin-top:14px">Neither the Georgian nor Mediterranean competitors can credibly claim authenticity, warmth, and visual drama simultaneously. NAR owns all three, and the reviews prove it.</p>
+
+<!-- 04 THE AD -->
+<div class="sec">
+  <span class="sec-num">04 ——</span>
+  <span class="sec-title">The Ad — What It Should Convey</span>
+  <span class="sec-rule"></span>
+</div>
+<p class="p">Based on the review analysis and Bevri's proven format, the video ad should follow the same emotional arc — adapted to NAR's dishes and interior. Assets will be produced by Nano Banana.</p>
+
+<!-- LOCAL PLACEHOLDER ASSET (replace with real file on GitHub) -->
+<div style="display:flex;flex-direction:column;gap:12px;align-items:center;margin:18px 0;">
+  <video src="../../assets/kacha.mp4" autoplay muted loop playsinline style="width:100%;max-width:720px;border-radius:6px;display:block;outline:none;">
+    Your browser does not support the video tag.
+  </video>
+
+  <div style="font-size:0.82rem;color:var(--muted);text-align:center;max-width:720px;">Placeholder: `assets/kacha.mp4`. Replace this file with the final MP4 in the same folder when publishing.</div>
+</div>
+
+<div class="ad-direction">
+  <div class="ad-direction-row">
+    <div class="ad-direction-key">Hook</div>
+    <div class="ad-direction-val">"I have never eaten Azerbaijani food before. Let's fix that." — shot at NAR's table, candlelit, pomegranate mural visible behind. The unfamiliarity is the draw.</div>
+  </div>
+  <div class="ad-direction-row">
+    <div class="ad-direction-key">Hero Dishes</div>
+    <div class="ad-direction-val"><strong>Shah Plov</strong> — the lavash crack and steam reveal. <strong>Gurza</strong> — broth pour, first bite reaction. <strong>Adjaruli Khachapuri</strong> — the cheese pull that Bevri's audience already responds to. These three dishes carry the visual narrative.</div>
+  </div>
+  <div class="ad-direction-row">
+    <div class="ad-direction-key">Tone</div>
+    <div class="ad-direction-val">Authentic discovery. No script, no voiceover. The creator reacts live — the same way Bevri's most successful post was filmed. Real reactions outperform acted ones every time.</div>
+  </div>
+  <div class="ad-direction-row">
+    <div class="ad-direction-key">The Offer</div>
+    <div class="ad-direction-val">Happy Hour appears only in the final 7 seconds — after 28 seconds of food desire have been built. Leading with the discount before desire is established devalues the brand. Food first, offer last.</div>
+  </div>
+  <div class="ad-direction-row">
+    <div class="ad-direction-key">Why it works</div>
+    <div class="ad-direction-val">Bevri's audience has been trained to respond to this format. NAR's dishes — Shah Plov and Gurza especially — are more visually theatrical than anything Bevri has. The same emotional arc, with better material.</div>
+  </div>
+</div>
+
+<!-- REVIEW QUOTES -->
+<div class="sec">
+  <span class="sec-num">A ——</span>
+  <span class="sec-title">What Customers Are Already Saying</span>
+  <span class="sec-rule"></span>
+</div>
+<p class="p">These are unprompted phrases from NAR reviews. They validate the ad direction — and several can serve as on-screen text overlays verbatim.</p>
+<div class="quotes">
+  <div class="quote-card"><div class="quote-text">"Shah Plov was phenomenal, lule kebab perfectly seasoned."</div></div>
+  <div class="quote-card"><div class="quote-text">"Loved the Gurza dumplings — think soup dumplings!"</div></div>
+  <div class="quote-card"><div class="quote-text">"WOW 🤩 We ordered family style for a party of 7."</div></div>
+  <div class="quote-card"><div class="quote-text">"Genuine Azerbaijani hospitality — unlike anywhere else."</div></div>
+  <div class="quote-card"><div class="quote-text">"Best Caucasian food I've had outside the Caucasus."</div></div>
+  <div class="quote-card"><div class="quote-text">"Already planning to come back and bring everyone I know."</div></div>
+</div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-l">NAR Restaurant · 286 W El Camino Real, Mountain View · narfood.com</div>
+  <div class="footer-r">M4ROI · March 2026</div>
+</div>
+
+</body>
+</html>
