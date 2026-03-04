@@ -1,10 +1,10 @@
  M4ROI — AI Marketing Agents for Local Business Growth
 
-**[m4roi.com](https://www.m4roi.com) · david@m4roi.com**
+**[m4roi.com](https://www.m4roi.com) · david@m4roi.com · Ad proposal is live at: https://davidcastropena.github.io/M4ROI-nar-proposal/**
 
 ---
 
-## What We Do
+## What I Do
 
 M4ROI deploys AI marketing agents that help small businesses run smarter, faster advertising campaigns — without an agency, without the guesswork, and at a fraction of the cost.
 
